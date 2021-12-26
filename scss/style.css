@@ -14,4 +14,177 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/***************
+mixins
+***************/
+/***************
+mainHeader
+***************/
+.mainHeader {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(105, 11, 154, 0.4)), to(rgba(105, 11, 154, 0.4))), url(/img/header.png);
+  background-image: linear-gradient(rgba(105, 11, 154, 0.4), rgba(105, 11, 154, 0.4)), url(/img/header.png);
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
+}
+
+.mainHeader .bg-light {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(105, 11, 154, 0.4)), to(rgba(105, 11, 154, 0.4))) !important;
+  background: linear-gradient(rgba(105, 11, 154, 0.4), rgba(105, 11, 154, 0.4)) !important;
+}
+
+.mainHeader .bg-light .nav-link {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  margin-right: 15px;
+  letter-spacing: 2px;
+}
+
+.mainHeader .bg-light .nav-link:hover {
+  color: #22b8cf;
+}
+
+.mainHeader .container {
+  margin-top: 60px;
+}
+
+.mainHeader .container h1 {
+  font-size: 3.5rem;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.mainHeader .container p {
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.mainHeader .container button {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  background: transparent;
+  border: 1px solid #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.mainHeader .container button:hover {
+  color: #22b8cf;
+}
+
+/***************
+radionice
+***************/
+#radionice {
+  padding: 80px 0;
+}
+
+#radionice h2 {
+  color: #690b9a;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+#radionice button {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  background: #690b9a;
+  border: 0;
+  line-height: 1.5;
+  padding: 10px 20px;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  margin-top: 10px;
+}
+
+#radionice button:hover {
+  color: #f6d2d4;
+}
+
+/***************
+divider
+***************/
+.divider {
+  background-image: url(/img/divider.png);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  -webkit-clip-path: polygon(0 40%, 100% 20%, 100% 80%, 0 100%);
+          clip-path: polygon(0 40%, 100% 20%, 100% 80%, 0 100%);
+}
+
+/***************
+kursevi
+***************/
+#kursevi {
+  padding: 80px 0;
+}
+
+#kursevi h2 {
+  color: #690b9a;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+#kursevi button {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  background: #690b9a;
+  border: 0;
+  line-height: 1.5;
+  padding: 10px 20px;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  margin-top: 10px;
+}
+
+#kursevi button:hover {
+  color: #f6d2d4;
+}
+
+/***************
+footer
+***************/
+footer {
+  background-image: url(/img/footer.png);
+  background-size: cover;
+  background-position: center;
+}
+
+footer p {
+  font-size: .8rem;
+  margin-top: 10px;
+}
+
+footer .fab {
+  font-size: 1.5rem;
+  margin-right: 30px;
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */

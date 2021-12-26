@@ -13,6 +13,7 @@ $white: #fff;
 $font: 16px;
 $fontFamily: "Raleway", sans-serif;
 $transition: 0.4s ease-in-out;
+$padding: 80px 0;
 
 /***************
 basic styles
@@ -24,4 +25,144 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: 800;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/***************
+mixins
+***************/
+@mixin btn {
+    color: $white;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    background: $violet;
+    border: 0;
+    line-height: 1.5;
+    padding: 10px 20px;
+    transition: $transition;
+    margin-top: 10px;
+    &:hover {
+        color: $cream;
+    }
+}
+@mixin h2 {
+    color: $violet;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/***************
+mainHeader
+***************/
+.mainHeader {
+    background-image: linear-gradient(rgba(105, 11, 154, .4), rgba(105, 11, 154, .4)), url(/img/header.png);
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
+    .bg-light {
+        background: linear-gradient(rgba(105, 11, 154, .4), rgba(105, 11, 154, .4)) !important;
+        .nav-link {
+            color: $white;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: $transition;
+            margin-right: 15px;
+            letter-spacing: 2px;
+            &:hover {
+                color: $lightBlue;
+            }
+        }
+    }
+    .container {
+        margin-top: 60px;
+        h1 {
+            font-size: 3.5rem;
+            color: $white;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: $white;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        button {
+            color: $white;
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            border-radius: 20px;
+            background: transparent;
+            border: 1px solid $white;
+            line-height: 1.5;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            transition: $transition;
+            &:hover {
+                color: $lightBlue;
+            }
+        }
+    }
+}
+
+/***************
+radionice
+***************/
+#radionice {
+    padding: $padding;
+    h2 {
+        @include h2;
+    }
+    button {
+        @include btn;
+    }
+}
+
+/***************
+divider
+***************/
+.divider {
+    background-image: url(/img/divider.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    clip-path: polygon(0 40%, 100% 20%, 100% 80%, 0 100%);
+    
+}
+
+/***************
+kursevi
+***************/
+#kursevi {
+    padding: $padding;
+    h2 {
+        @include h2;
+    }
+    button {
+        @include btn;
+    }
+}
+
+/***************
+footer
+***************/
+footer {
+    background-image: url(/img/footer.png);
+    background-size: cover;
+    background-position: center;
+    p {
+        font-size: .8rem;
+        margin-top: 10px;
+    }
+    .fab {
+        font-size: 1.5rem;
+        margin-right: 30px;
+        cursor: pointer;
+    }
 }
