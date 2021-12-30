@@ -63,8 +63,11 @@ mainHeader
     background-image: linear-gradient(rgba(105, 11, 154, .4), rgba(105, 11, 154, .4)), url(/img/header.png);
     background-position: center;
     background-size: cover;
-    height: 80vh;
+    height: 100vh;
     clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
+    @media (max-width:767px) {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
     .bg-light {
         background: linear-gradient(rgba(105, 11, 154, .4), rgba(105, 11, 154, .4)) !important;
         .nav-link {
@@ -80,32 +83,48 @@ mainHeader
         }
     }
     .container {
-        margin-top: 60px;
-        h1 {
-            font-size: 3.5rem;
-            color: $white;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
+        @media (max-width:767px) {
+            text-align: center;
         }
-        p {
-            color: $white;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-        }
-        button {
-            color: $white;
-            font-size: 1.1rem;
-            font-weight: 400;
-            letter-spacing: 1px;
-            border-radius: 20px;
-            background: transparent;
-            border: 1px solid $white;
-            line-height: 1.5;
-            text-transform: uppercase;
-            padding: 10px 20px;
-            transition: $transition;
-            &:hover {
-                color: $lightBlue;
+        .row {
+            height: 80vh;
+            h1 {
+                font-size: 3.5rem;
+                color: $white;
+                letter-spacing: 2px;
+                margin-bottom: 10px;
+                @media (max-width:767px) {
+                    font-size: 2.5rem;
+                }
+            }
+            p {
+                color: $white;
+                letter-spacing: 1px;
+                margin-bottom: 10px;
+            }
+            button {
+                color: $white;
+                font-size: 1.1rem;
+                font-weight: 400;
+                letter-spacing: 1px;
+                border-radius: 20px;
+                background: transparent;
+                border: 1px solid $white;
+                line-height: 1.5;
+                text-transform: uppercase;
+                padding: 10px 20px;
+                transition: $transition;
+                &:hover {
+                    color: $lightBlue;
+                }
+            }
+            iframe {
+                @media (max-width:767px) {
+                    width: 100%;
+                    height: auto;
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                }
             }
         }
     }
@@ -131,9 +150,14 @@ divider
     background-image: url(/img/divider.png);
     background-position: center;
     background-size: cover;
-    height: 100vh;
-    clip-path: polygon(0 40%, 100% 20%, 100% 80%, 0 100%);
-    
+    height: 929px;
+    position: relative;
+    .lead {
+        font-size: 1.9rem;
+        position: absolute;
+        top: 470px;
+        transform: rotate(-10deg);
+    }
 }
 
 /***************
@@ -156,6 +180,12 @@ footer {
     background-image: url(/img/footer.png);
     background-size: cover;
     background-position: center;
+    @media (max-width:767px) {
+        text-align: center;
+    }
+    .col-md-3 {
+        padding-top: 60px;
+    }
     p {
         font-size: .8rem;
         margin-top: 10px;
@@ -165,4 +195,77 @@ footer {
         margin-right: 30px;
         cursor: pointer;
     }
+}
+
+/***************
+blogHeader
+***************/
+.blogHeader {
+    background-image: linear-gradient(rgba(105, 11, 154, .4), rgba(105, 11, 154, .4)), url(/img/headers.png);
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
+    .bg-light {
+        background: linear-gradient(rgba(105, 11, 154, .4), rgba(105, 11, 154, .4)) !important;
+        .nav-link {
+            color: $white;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: $transition;
+            margin-right: 15px;
+            letter-spacing: 2px;
+            &:hover {
+                color: $lightBlue;
+            }
+        }
+    }
+    .container {
+        margin-top: 60px;
+        @media (max-width:767px) {
+            text-align: center;
+        }
+        h2 {
+            color: $cream;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        p {
+            color: $white;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        button {
+            color: $white;
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            border-radius: 20px;
+            background: transparent;
+            border: 1px solid $white;
+            line-height: 1.5;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            transition: $transition;
+            margin-top: 20px;
+            &:hover {
+                color: $lightBlue;
+            }
+        }
+    }
+}
+
+/***************
+blog radionice
+***************/
+.blog-radionice {
+    padding: $padding;
+}
+
+/***************
+footer
+***************/
+footer {
+    
 }
